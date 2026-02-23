@@ -123,6 +123,6 @@ async def _gen_session(_, cq: types.CallbackQuery):
         pass
     try:
         await client.disconnect()
-        await cq.message.reply_text(f"Successfully generated your {sgen} string session.\n\nPlease check your saved messages for getting it.\n\nA string generator bot by <a href={SUPPORT_CHAT}>Fallen Association</a>.", reply_markup=buttons.pm_key(cq.from_user.id))
+        await cq.message.reply_text(f"Successfully generated your {sgen} string session.\n\nPlease check Bot for getting it.\n\nA string generator bot by <a href={SUPPORT_CHAT}>Venom</a>.", reply_markup=buttons.pm_key(cq.from_user.id))
     except:
         pass
